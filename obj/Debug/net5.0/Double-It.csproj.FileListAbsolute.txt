@@ -1,0 +1,5 @@
+/Users/max.welll/Desktop/epicodus/mar/double-it/obj/Debug/net5.0/Double-It.csprojAssemblyReference.cache
+/Users/max.welll/Desktop/epicodus/mar/double-it/obj/Debug/net5.0/Double-It.GeneratedMSBuildEditorConfig.editorconfig
+/Users/max.welll/Desktop/epicodus/mar/double-it/obj/Debug/net5.0/Double-It.AssemblyInfoInputs.cache
+/Users/max.welll/Desktop/epicodus/mar/double-it/obj/Debug/net5.0/Double-It.AssemblyInfo.cs
+/Users/max.welll/Desktop/epicodus/mar/double-it/obj/Debug/net5.0/Double-It.csproj.CoreCompileInputs.cache
