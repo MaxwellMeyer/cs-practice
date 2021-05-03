@@ -160,17 +160,16 @@
 using System;
 using System.Collections.Generic;
 
-
-
 public class Car
 {
   public string MakeModel;
   public int Price;
   public int Miles;
-public bool WorthBuying(int maxPrice)
+
+  public bool WorthBuying(int maxPrice)
   {
     return (Price <= maxPrice);
-  }  
+  }
 }
 
 public class Program
@@ -197,16 +196,25 @@ public class Program
     amc.Price = 400;
     amc.Miles = 198000;
 
-  List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc };
-  Console.WriteLine("Enter maximum price: ");
+    List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc };
+
+    Console.WriteLine("Enter maximum price: ");
     string stringMaxPrice = Console.ReadLine();
     int maxPrice = int.Parse(stringMaxPrice);
 
     List<Car> CarsMatchingSearch = new List<Car>(0);
 
-    foreach(Car automobile in Cars)
+    foreach (Car automobile in Cars)
+    {
+      if (automobile.WorthBuying(maxPrice))
+      {
+        CarsMatchingSearch.Add(automobile);
+      }
+    }
+
+    foreach(Car automobile in CarsMatchingSearch)
     {
       Console.WriteLine(automobile.MakeModel);
     }
   }
-}    
+}
