@@ -136,23 +136,40 @@
 //   }
 // }
 // ?????????????????????????????????? LEAP CHECKER ?????????????????????????????
+// using System;
+
+// class LeapYear
+// {
+//   static void Main()
+//   {
+//     Console.WriteLine("What year were you born in?");
+//     string stringBirthYear = Console.ReadLine();
+//     int birthYear = int.Parse(stringBirthYear);
+
+//     Console.WriteLine("You were alive during these leap years:");
+//     for (int year = birthYear; year <= 2020; year ++)
+//     {
+//       if (year % 4 == 0)
+//       {
+//         Console.WriteLine(year);
+//       }
+//     }
+//   }
+// }
+//@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@ DEARLERSHIP @@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@@
 using System;
+using System.Collections.Generic;
 
-class LeapYear
+public class Car
 {
-  static void Main()
-  {
-    Console.WriteLine("What year were you born in?");
-    string stringBirthYear = Console.ReadLine();
-    int birthYear = int.Parse(stringBirthYear);
+  public string MakeModel;
+  public int Price;
+  public int Miles;
+}
 
-    Console.WriteLine("You were alive during these leap years:");
-    for (int year = birthYear; year <= 2020; year ++)
-    {
-      if (year % 4 == 0)
-      {
-        Console.WriteLine(year);
-      }
-    }
+public class Program
+{
+  public static void Main()
+  {
   }
 }
