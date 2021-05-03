@@ -202,6 +202,8 @@ public class Program
     string stringMaxPrice = Console.ReadLine();
     int maxPrice = int.Parse(stringMaxPrice);
 
+    List<Car> CarsMatchingSearch = new List<Car>(0);
+
     foreach(Car automobile in Cars)
     {
       Console.WriteLine(automobile.MakeModel);
