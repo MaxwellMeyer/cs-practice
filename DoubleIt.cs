@@ -13,7 +13,7 @@
 //   }
 // }
 
-using System;
+  using System;
 
 class HotelCost
 {
@@ -31,6 +31,14 @@ class HotelCost
     if (summer && weekend)
     {
       Console.WriteLine("Your stay is probably going to be pretty expensive. It's both peak travel season AND the weekend.");
+    }
+    else if (summer)
+    {
+      Console.WriteLine("Your stay might be more expensive than normal!");
+    }
+    else if (weekend)
+    {
+      Console.WriteLine("Your stay might be more expensive than normal!");
     }
     else
     {
