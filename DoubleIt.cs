@@ -126,14 +126,12 @@ class GroceryList
 {
   static void Main()
   {
-    string[] myGroceryList = {"eggs", "milk", "bread", "bananas", "cereal", "rice", "yogurt"};
+    string[] myGroceryList = { "eggs", "milk", "bread", "bananas", "cereal", "rice" };
 
     Console.WriteLine("My grocery list:");
-
-    foreach (string groceryItem in myGroceryList)
+    for (int index = 0; index < myGroceryList.Length; index++)
     {
-      Console.WriteLine(groceryItem);
+      Console.WriteLine(myGroceryList[index]);
     }
-
   }
 }
