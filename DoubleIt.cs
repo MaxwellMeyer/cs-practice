@@ -120,18 +120,39 @@
 //   }
 // }
 //^^^^^^^^^^^^^^^^^^^^^^^ GROCERY LIST ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+// using System;
+
+// class GroceryList
+// {
+//   static void Main()
+//   {
+//     string[] myGroceryList = { "eggs", "milk", "bread", "bananas", "cereal", "rice" };
+
+//     Console.WriteLine("My grocery list:");
+//     for (int index = 0; index < myGroceryList.Length; index++)
+//     {
+//       Console.WriteLine(myGroceryList[index]);
+//     }
+//   }
+// }
+// ?????????????????????????????????? LEAP CHECKER ?????????????????????????????
 using System;
 
-class GroceryList
+class LeapYear
 {
   static void Main()
   {
-    string[] myGroceryList = { "eggs", "milk", "bread", "bananas", "cereal", "rice" };
+    Console.WriteLine("What year were you born in?");
+    string stringBirthYear = Console.ReadLine();
+    int birthYear = int.Parse(stringBirthYear);
 
-    Console.WriteLine("My grocery list:");
-    for (int index = 0; index < myGroceryList.Length; index++)
+    Console.WriteLine("You were alive during these leap years:");
+    for (int year = birthYear; year <= 2020; year ++)
     {
-      Console.WriteLine(myGroceryList[index]);
+      if (year % 4 == 0)
+      {
+        Console.WriteLine(year);
+      }
     }
   }
 }
