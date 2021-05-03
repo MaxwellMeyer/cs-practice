@@ -12,37 +12,110 @@
 //     Console.WriteLine("I doubled your number for you: " + stringDoubledNumber);
 //   }
 // }
+//############# BRANCHING#######################
+// using System;
 
-  using System;
+// class HotelCost
+// {
+//   static void Main()
+//   {
+//     Console.WriteLine("In what season are you booking a stay?");
+//     string season = Console.ReadLine();
 
-class HotelCost
+//     Console.WriteLine("On the weekend or a weeknight?");
+//     string dayOfWeek = Console.ReadLine();
+
+//     bool summer = season == "summer";
+//     bool weekend = dayOfWeek == "weekend";
+
+//     if (summer && weekend)
+//     {
+//       Console.WriteLine("Your stay is probably going to be pretty expensive. It's both peak travel season AND the weekend.");
+//     }
+//     else if (summer || weekend)
+//     {
+//       Console.WriteLine("Your stay might be more expensive than normal!");
+//     }
+//     else
+//     {
+//       Console.WriteLine("Your stay might be expensive, but it could be worse!");
+//     }
+//   }
+// }
+// %%%%%%%%%%%%%%%%%%%% PHONEBOOK %%%%%%%%%%%%%%%%%%%%
+using System;
+using System.Collections.Generic;
+
+class Phonebook
 {
+  public static Dictionary<string, string> phoneNumbers = new Dictionary<string, string>();
+
   static void Main()
+{
+  Console.WriteLine("MAIN MENU");
+  Console.WriteLine("Would you like to add a person to your phone book? ['Y' for yes, 'Enter' for no]");
+  string answer = Console.ReadLine();
+  if (answer == "Y" || answer == "y")
   {
-    Console.WriteLine("In what season are you booking a stay?");
-    string season = Console.ReadLine();
-
-    Console.WriteLine("On the weekend or a weeknight?");
-    string dayOfWeek = Console.ReadLine();
-
-    bool summer = season == "summer";
-    bool weekend = dayOfWeek == "weekend";
-
-    if (summer && weekend)
+    AddContact();
+  }
+  else
+  {
+    Console.WriteLine("Would you like to look up a number in your phone book? ['Y' for yes, 'Enter' for no]");
+    string lookUpAnswer = Console.ReadLine();
+    if (lookUpAnswer == "Y" || lookUpAnswer == "y")
     {
-      Console.WriteLine("Your stay is probably going to be pretty expensive. It's both peak travel season AND the weekend.");
-    }
-    else if (summer)
-    {
-      Console.WriteLine("Your stay might be more expensive than normal!");
-    }
-    else if (weekend)
-    {
-      Console.WriteLine("Your stay might be more expensive than normal!");
+      LookUpContact();
     }
     else
     {
-      Console.WriteLine("Your stay might be expensive, but it could be worse!");
+      Console.WriteLine("Are you finished with this program? ['Y' for yes, 'Enter' for no]");
+      string finishedAnswer = Console.ReadLine();
+      if (finishedAnswer == "Y" || finishedAnswer == "y")
+      {
+        Console.WriteLine("Goodbye.");
+      }
+      else
+      {
+        Main();
+      }
     }
+  }
+}
+
+  static void AddContact()
+{
+  Console.WriteLine("NEW CONTACT");
+  Console.WriteLine("Enter a new contact name");
+  string name = Console.ReadLine();
+  Console.WriteLine("Enter a new contact phone number");
+  string number = Console.ReadLine();
+  if (phoneNumbers.ContainsKey(name))
+  {
+    Console.WriteLine("That person is already in your phonebook. Their number is " + phoneNumbers[name]);
+  }
+  else
+  {
+    phoneNumbers.Add(name, number);
+  }
+  Main();
+}
+
+
+static void LookUpContact()
+{
+  Console.WriteLine("CONTACT LOOKUP");
+  Console.WriteLine("Whose number would you like to look up?");
+  string friend = Console.ReadLine();
+  if (phoneNumbers.ContainsKey(friend))
+  {
+    string value = phoneNumbers[friend];
+    Console.WriteLine(friend + "\'s phone number is " + value);
+  }
+  else
+  {
+    Console.WriteLine("That person is not in your phone book.");
+  }
+  Main();
   }
 }
