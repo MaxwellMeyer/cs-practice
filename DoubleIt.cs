@@ -198,6 +198,9 @@ public class Program
     amc.Miles = 198000;
 
   List<Car> Cars = new List<Car>() { volkswagen, yugo, ford, amc };
+  Console.WriteLine("Enter maximum price: ");
+    string stringMaxPrice = Console.ReadLine();
+    int maxPrice = int.Parse(stringMaxPrice);
 
     foreach(Car automobile in Cars)
     {
